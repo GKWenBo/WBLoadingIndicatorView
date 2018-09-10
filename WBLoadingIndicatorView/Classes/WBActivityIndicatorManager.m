@@ -359,8 +359,6 @@
     CGFloat circleSize = size.width / 5.f;
     CGFloat deltaX = size.width / 2 - circleSize / 2;
     CGFloat deltaY = size.height / 2 - circleSize / 2;
-    CGFloat x = size.width / 2.f;
-    CGFloat y = size.height / 2.f;
     CFTimeInterval duration = 2.f;
     CAMediaTimingFunction *timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     
@@ -407,7 +405,7 @@
                             @"{fx,0}",
                             @"{0,0}"]
                    deltaX:deltaX
-                   deltaY:deltaX];
+                   deltaY:deltaY];
     bottomLeftCircle.bounds = CGRectMake(0, 0, circleSize, circleSize);
     bottomLeftCircle.position = CGPointMake(circleSize / 2.f, size.height - circleSize / 2.f);
     [bottomLeftCircle addAnimation:animation
