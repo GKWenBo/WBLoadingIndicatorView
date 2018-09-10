@@ -1,0 +1,6 @@
+framework module WBLoadingIndicatorView {
+  umbrella header "WBLoadingIndicatorView-umbrella.h"
+
+  export *
+  module * { export * }
+}
