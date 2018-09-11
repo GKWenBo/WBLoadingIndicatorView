@@ -94,6 +94,7 @@ static const CGFloat WBDefaultPadding = 5.f;
     
     self.backgroundView = ({
         WBLoadingBackgroundView *backgroundView = [[WBLoadingBackgroundView alloc]initWithFrame:self.bounds];
+        backgroundView.style = WBLoadingIndicatorBackgroundSolidStyle;
         backgroundView.backgroundColor = [UIColor clearColor];
         backgroundView.alpha = 0.f;
         backgroundView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;

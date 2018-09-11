@@ -45,7 +45,7 @@ pod 'WBLoadingIndicatorView'
 将**WBLoadingIndicatorView**文件夹拖入工程即可。
 
 ## Usage
-
+具体效果与使用，请查看demo.
 
 ## Author
 
@@ -55,7 +55,7 @@ email：1050794513@qq.com
 
 ## 更新
 
-  > - 2018-09-05 （1.0.1）：添加背景模糊效果
+  > - 2018-09-11 （1.0.1）：添加背景模糊效果
 
 ## License
 
