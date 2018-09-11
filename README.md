@@ -15,7 +15,7 @@
 <br>
 <img src="https://ws2.sinaimg.cn/large/0069RVTdly1fv5vfzum5xg308p0i2aak.gif" width="300" align="center"><img src="https://ws4.sinaimg.cn/large/0069RVTdly1fv5vhwysnfg308p0i2dgd.gif" width="300" align="center">
 <br>
-<img src="https://ws4.sinaimg.cn/large/0069RVTdly1fv5vw05y8cg308p0i2wf5.gif" width="200" align="300"><img src="https://ws1.sinaimg.cn/large/0069RVTdly1fv5vwliqtyg308p0i276d.gif" width="300 align="center"">
+<img src="https://ws4.sinaimg.cn/large/0069RVTdly1fv5vw05y8cg308p0i2wf5.gif" width="300" align="center"><img src="https://ws1.sinaimg.cn/large/0069RVTdly1fv5vwliqtyg308p0i276d.gif" width="300 align="center"">
 <br>
 </div>
 
