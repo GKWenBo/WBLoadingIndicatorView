@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "WBActivityIndicatorManager.h"
-
 @class WBLoadingBackgroundView;
+
+typedef NS_ENUM(NSInteger, WBLoadingIndicatorBackgroundStyle) {
+    WBLoadingIndicatorBackgroundSolidStyle,
+    WBLoadingIndicatorBackgroundBlurStyle
+};
 
 @interface WBLoadingIndicatorView : UIView
 
@@ -73,7 +77,15 @@
 
 @end
 
-
 @interface WBLoadingBackgroundView : UIView
+
+/*  < 背景样式 > */
+@property (nonatomic, assign) WBLoadingIndicatorBackgroundStyle style;
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000
+/*  < 模糊效果 > */
+@property (nonatomic, assign) UIBlurEffectStyle blurEffectStyle;
+#endif
+/*  < 背景色 > */
+@property (nonatomic, strong) UIColor *color;
 
 @end

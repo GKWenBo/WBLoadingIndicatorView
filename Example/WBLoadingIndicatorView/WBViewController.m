@@ -58,8 +58,8 @@
             indicatorView.type = WBLoadingAnimationcircleStrokeSpinType;
             indicatorView.backgroundView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.3];
             indicatorView.contentColor = [UIColor redColor];
-//            indicatorView.bezelView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.7f];
-            
+            indicatorView.bezelView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.7f];
+            indicatorView.bezelView.blurEffectStyle = UIBlurEffectStyleLight;
         }
             break;
         case 1:

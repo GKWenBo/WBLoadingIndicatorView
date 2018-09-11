@@ -12,11 +12,26 @@
 
 ## 中文说明
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+基于CALayer封装加载等待动画，目前支持6种类型动画：
+```
+typedef NS_ENUM(NSInteger, WBLoadingAnimationType) {
+WBLoadingAnimationcircleStrokeSpinType,
+WBWBLoadingAnimationBallPulseType,
+WBWBLoadingAnimationBallClipRotateType,
+WBWBLoadingAnimationBallClipRotatePulseType,
+WBWBLoadingAnimationBallClipRotateMultipleType,
+WBWBLoadingAnimationBallTrianglePathType
+};
+```
 
 ## Requirements
 
+- iOS 8+
+- Xcode 8+
+
 ## Installation
+
+### Cocoapods安装
 
 WBLoadingIndicatorView is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
@@ -25,9 +40,22 @@ it, simply add the following line to your Podfile:
 pod 'WBLoadingIndicatorView'
 ```
 
+### 手动安装
+
+将**WBLoadingIndicatorView**文件夹拖入工程即可。
+
+## Usage
+
+
 ## Author
 
-wenmobo, 1050794513@qq.com
+author：wenbo    
+QQ：1050794513  
+email：1050794513@qq.com
+
+## 更新
+
+  > - 2018-09-05 （1.0.1）：添加背景模糊效果
 
 ## License
 

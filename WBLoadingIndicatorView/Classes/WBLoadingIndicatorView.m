@@ -14,7 +14,6 @@ static const CGFloat WBDefaultPadding = 5.f;
 
 @property (nonatomic, strong) UIView *indicator;
 @property (nonatomic, strong) NSArray *bezelConstraints;
-@property (nonatomic, strong) NSArray *paddingConstraints;
 @property (nonatomic, strong) UIView *topSpacer;
 @property (nonatomic, strong) UIView *bottomSpacer;
 
@@ -521,19 +520,131 @@ static const CGFloat WBDefaultPadding = 5.f;
 
 @end
 
+@interface WBLoadingBackgroundView ()
+
+@property (nonatomic, strong) UIVisualEffectView *effectView;
+@property (nonatomic, strong) UIToolbar *toolbar;
+
+@end
+
 @implementation WBLoadingBackgroundView
 
 - (instancetype)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
+        if (kCFCoreFoundationVersionNumber >= kCFCoreFoundationVersionNumber_iOS_7_0) {
+            _style = WBLoadingIndicatorBackgroundBlurStyle;
+            
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000 || TARGET_OS_TV
+            _blurEffectStyle = UIBlurEffectStyleLight;
+#endif
+            if (kCFCoreFoundationVersionNumber >= kCFCoreFoundationVersionNumber_iOS_8_0) {
+                _color = [UIColor colorWithWhite:0.8f alpha:0.6f];
+            }else {
+                _color = [UIColor colorWithWhite:0.95f alpha:0.6f];
+            }
+        }else {
+            _style = WBLoadingIndicatorBackgroundSolidStyle;
+            _color = [[UIColor blackColor] colorWithAlphaComponent:0.8];
+        }
         
+        self.clipsToBounds = YES;
+        [self updateForBackgroundStyle];
     }
     return self;
 }
 
-#pragma mark - Layout
+- (void)updateForBackgroundStyle {
+    WBLoadingIndicatorBackgroundStyle style = self.style;
+    if (style == WBLoadingIndicatorBackgroundBlurStyle) {
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000 || TARGET_OS_TV
+        if (kCFCoreFoundationVersionNumber >= kCFCoreFoundationVersionNumber_iOS_8_0) {
+            UIBlurEffect *effect = [UIBlurEffect effectWithStyle:self.blurEffectStyle];
+            UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
+            [self addSubview:effectView];
+            effectView.frame = self.bounds;
+            effectView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+            self.backgroundColor = self.color;
+            self.layer.allowsGroupOpacity = NO;
+            self.effectView = effectView;
+        } else {
+#endif
+#if !TARGET_OS_TV
+            UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectInset(self.bounds, -100.f, -100.f)];
+            toolbar.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+            toolbar.barTintColor = self.color;
+            toolbar.translucent = YES;
+            [self addSubview:toolbar];
+            self.toolbar = toolbar;
+#endif
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000 || TARGET_OS_TV
+        }
+#endif
+    }else {
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000 || TARGET_OS_TV
+        if (kCFCoreFoundationVersionNumber >= kCFCoreFoundationVersionNumber_iOS_8_0) {
+            [self.effectView removeFromSuperview];
+            self.effectView = nil;
+        } else {
+#endif
+#if !TARGET_OS_TV
+            [self.toolbar removeFromSuperview];
+            self.toolbar = nil;
+#endif
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000 || TARGET_OS_TV
+        }
+#endif
+        self.backgroundColor = self.color;
+    }
+}
 
+- (void)updateViewsForColor:(UIColor *)color {
+    if (self.style == WBLoadingIndicatorBackgroundBlurStyle) {
+        if (kCFCoreFoundationVersionNumber >= kCFCoreFoundationVersionNumber_iOS_8_0) {
+            self.backgroundColor = self.color;
+        } else {
+#if !TARGET_OS_TV
+            self.toolbar.barTintColor = color;
+#endif
+        }
+    } else {
+        self.backgroundColor = self.color;
+    }
+}
+
+// MARK:Setter
+- (void)setStyle:(WBLoadingIndicatorBackgroundStyle)style {
+    if (style == WBLoadingIndicatorBackgroundBlurStyle && kCFCoreFoundationVersionNumber < kCFCoreFoundationVersionNumber_iOS_7_0) {
+        style = WBLoadingIndicatorBackgroundSolidStyle;
+    }
+    if (_style != style) {
+        _style = style;
+        [self updateForBackgroundStyle];
+    }
+}
+
+- (void)setColor:(UIColor *)color {
+    NSAssert(color, @"The color should not be nil.");
+    if (color != _color && ![color isEqual:_color]) {
+        _color = color;
+        [self updateViewsForColor:color];
+    }
+}
+
+#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 80000 || TARGET_OS_TV
+
+- (void)setBlurEffectStyle:(UIBlurEffectStyle)blurEffectStyle {
+    if (_blurEffectStyle == blurEffectStyle) {
+        return;
+    }
+    _blurEffectStyle = blurEffectStyle;
+    [self updateForBackgroundStyle];
+}
+
+#endif
+
+#pragma mark - Layout
 - (CGSize)intrinsicContentSize {
     // Smallest size possible. Content pushes against this.
     return CGSizeZero;

@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 typedef NS_ENUM(NSInteger, WBLoadingAnimationType) {
-    WBLoadingAnimationcircleStrokeSpinType,          /*  < 圆环加载动画 > */
-    WBWBLoadingAnimationBallPulseType,               /** < 三并排动画 > */
+    WBLoadingAnimationcircleStrokeSpinType,
+    WBWBLoadingAnimationBallPulseType,
     WBWBLoadingAnimationBallClipRotateType,
     WBWBLoadingAnimationBallClipRotatePulseType,
     WBWBLoadingAnimationBallClipRotateMultipleType,
