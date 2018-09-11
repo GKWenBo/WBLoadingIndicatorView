@@ -75,6 +75,7 @@ static const CGFloat WBDefaultPadding = 5.f;
     _margin = 20.f;
     _indicatorSize = CGSizeMake(35, 35);
     _type = WBLoadingAnimationcircleStrokeSpinType;
+    _removeFromSuperViewOnHide = YES;
     BOOL isLegacy = kCFCoreFoundationVersionNumber < kCFCoreFoundationVersionNumber_iOS_7_0;
     _contentColor = isLegacy ? [UIColor whiteColor] : [UIColor colorWithWhite:0.f alpha:0.7f];
     // Transparent background
@@ -506,7 +507,7 @@ static const CGFloat WBDefaultPadding = 5.f;
 }
 
 - (void)setIndicatorColor:(UIColor *)indicatorColor {
-    if (indicatorColor != _indicatorColor && [indicatorColor isEqual:_indicatorColor]) {
+    if (indicatorColor != _indicatorColor && ![indicatorColor isEqual:_indicatorColor]) {
         _indicatorColor = indicatorColor;
         [self updateIndicators];
     }
@@ -547,7 +548,7 @@ static const CGFloat WBDefaultPadding = 5.f;
             }
         }else {
             _style = WBLoadingIndicatorBackgroundSolidStyle;
-            _color = [[UIColor blackColor] colorWithAlphaComponent:0.8];
+            _color = [[UIColor blackColor] colorWithAlphaComponent:0.8f];
         }
         
         self.clipsToBounds = YES;

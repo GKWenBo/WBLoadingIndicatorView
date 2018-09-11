@@ -9,6 +9,12 @@
 <a  href="https://cocoapods.org/pods/WBLoadingIndicatorView"><img src ="https://img.shields.io/badge/language-objctive--c-red.svg?style=flat"> </a>
 </p>
 
+<figure class="half">
+<img src="https://ws2.sinaimg.cn/large/0069RVTdly1fv5vfzum5xg308p0i2aak.gif" width="200"><img src="https://ws4.sinaimg.cn/large/0069RVTdly1fv5vhwysnfg308p0i2dgd.gif" width="200">
+</figure>
+<figure class="half">
+<img src="https://ws4.sinaimg.cn/large/0069RVTdly1fv5vw05y8cg308p0i2wf5.gif" width="200"><img src="https://ws1.sinaimg.cn/large/0069RVTdly1fv5vwliqtyg308p0i276d.gif" width="200">
+</figure>
 
 ## 中文说明
 

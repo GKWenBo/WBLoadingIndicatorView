@@ -57,9 +57,8 @@
                                                                                toView:self.view];
             indicatorView.type = WBLoadingAnimationcircleStrokeSpinType;
             indicatorView.backgroundView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.3];
-            indicatorView.contentColor = [UIColor redColor];
+            indicatorView.contentColor = [UIColor whiteColor];
             indicatorView.bezelView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.7f];
-            indicatorView.bezelView.blurEffectStyle = UIBlurEffectStyleLight;
         }
             break;
         case 1:
@@ -70,7 +69,7 @@
             indicatorView.type = WBWBLoadingAnimationBallPulseType;
             indicatorView.backgroundView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.3];
             indicatorView.contentColor = [UIColor whiteColor];
-//            indicatorView.bezelView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.7f];
+            indicatorView.bezelView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.7f];
             indicatorView.indicatorSize = CGSizeMake(60, 60);
         }
             break;
@@ -119,8 +118,11 @@
                                                                                toView:self.view];
             indicatorView.type = WBWBLoadingAnimationBallTrianglePathType;
             indicatorView.backgroundView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.3];
-            indicatorView.contentColor = [UIColor whiteColor];
-//            indicatorView.bezelView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.7f];
+            indicatorView.bezelView.style = WBLoadingIndicatorBackgroundSolidStyle;
+            indicatorView.bezelView.backgroundColor = [UIColor clearColor];
+            indicatorView.indicatorColor = [UIColor whiteColor];
+            indicatorView.label.text = nil;
+            
         }
             break;
         default:
@@ -132,6 +134,7 @@
                                           indicatorSize:(CGSize)indicatorSize
                                                  toView:(UIView *)view {
     WBLoadingIndicatorView *indicatorView = [WBLoadingIndicatorView wb_showIndicatorAddTo:view];
+    indicatorView.square = YES;
     indicatorView.type = type;
     indicatorView.label.text = @"   加载中...";
     indicatorView.indicatorSize = indicatorSize;

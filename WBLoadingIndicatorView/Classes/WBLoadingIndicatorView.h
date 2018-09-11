@@ -38,7 +38,7 @@ typedef NS_ENUM(NSInteger, WBLoadingIndicatorBackgroundStyle) {
 @property (nonatomic, assign) CGSize indicatorSize UI_APPEARANCE_SELECTOR;
 /** < 是否方形 > */
 @property (nonatomic, assign) BOOL square UI_APPEARANCE_SELECTOR;
-/** < 隐藏时从父视图移除 > */
+/** < 隐藏时从父视图移除 默认：YES > */
 @property (nonatomic, assign) BOOL removeFromSuperViewOnHide;
 /*  < 动画类型 > */
 @property (nonatomic, assign) WBLoadingAnimationType type;
