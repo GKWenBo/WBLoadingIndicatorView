@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'WBLoadingIndicatorView'
-  s.version          = '1.0.3'
+  s.version          = '1.1.0'
   s.summary          = '一组精美的加载等待动画'
   s.homepage         = 'https://github.com/wenmobo/WBLoadingIndicatorView'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
