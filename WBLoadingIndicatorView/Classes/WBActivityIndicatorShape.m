@@ -37,7 +37,7 @@
                         startAngle:0
                           endAngle:2 * M_PI
                          clockwise:NO];
-            layer.strokeColor = color.CGColor;
+            layer.fillColor = color.CGColor;
         }
             break;
         case WBActivityIndicatorRingThirdFourShapeType:

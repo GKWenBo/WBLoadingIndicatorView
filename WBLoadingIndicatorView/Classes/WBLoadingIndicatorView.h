@@ -14,17 +14,21 @@
 @interface WBLoadingIndicatorView : UIView
 
 // MARK:Property
+/*  < 动画容器视图 > */
 @property (nonatomic, strong) WBLoadingBackgroundView *bezelView;
+/*  < 背景视图 > */
 @property (nonatomic, strong) WBLoadingBackgroundView *backgroundView;
 /** < Loading text. > */
 @property (nonatomic, strong) UILabel *label;
 
 @property (nonatomic, strong) UIColor *contentColor UI_APPEARANCE_SELECTOR;
+/*  < 加载动画颜色 > */
 @property (nonatomic, strong) UIColor *indicatorColor UI_APPEARANCE_SELECTOR;
+/*  < bezelView中心点偏移 > */
 @property (nonatomic, assign) CGPoint offset UI_APPEARANCE_SELECTOR;
+/*  < 边距 默认：20 > */
 @property (nonatomic, assign) CGFloat margin UI_APPEARANCE_SELECTOR;
-
-
+/*  < bezelView最小size > */
 @property (nonatomic, assign) CGSize minSize UI_APPEARANCE_SELECTOR;
 /** < 加载动画size 默认：35 > */
 @property (nonatomic, assign) CGSize indicatorSize UI_APPEARANCE_SELECTOR;
@@ -32,6 +36,7 @@
 @property (nonatomic, assign) BOOL square UI_APPEARANCE_SELECTOR;
 /** < 隐藏时从父视图移除 > */
 @property (nonatomic, assign) BOOL removeFromSuperViewOnHide;
+/*  < 动画类型 > */
 @property (nonatomic, assign) WBLoadingAnimationType type;
 
 // MARK:Class Methods
@@ -70,7 +75,5 @@
 
 
 @interface WBLoadingBackgroundView : UIView
-
-@property (nonatomic, strong) UIColor *color;
 
 @end

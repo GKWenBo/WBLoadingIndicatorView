@@ -20,9 +20,34 @@
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PT5-2e-qkN">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="whP-gf-Uak" id="ip8-7d-qqK"/>
+                                    <outlet property="delegate" destination="whP-gf-Uak" id="XWK-0V-LCv"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PT5-2e-qkN" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" id="4sm-xB-pgb"/>
+                            <constraint firstItem="Mvr-aV-6Um" firstAttribute="top" secondItem="PT5-2e-qkN" secondAttribute="bottom" id="cks-aY-Jdw"/>
+                            <constraint firstItem="PT5-2e-qkN" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" id="lYP-UD-1Ej"/>
+                            <constraint firstAttribute="trailing" secondItem="PT5-2e-qkN" secondAttribute="trailing" id="nhS-Rm-qFB"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="WBLoadingIndicatorView" id="fXK-7i-oGG"/>
+                    <navigationItem key="navigationItem" title="WBLoadingIndicatorView" id="fXK-7i-oGG">
+                        <barButtonItem key="rightBarButtonItem" title="hideIndicator" id="h9B-5s-ybM">
+                            <connections>
+                                <action selector="hide:" destination="whP-gf-Uak" id="oPu-IL-coZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="_tableView" destination="PT5-2e-qkN" id="1ip-jm-3Eb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

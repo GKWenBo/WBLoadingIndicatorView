@@ -1,11 +1,16 @@
 # WBLoadingIndicatorView
 
-[![CI Status](https://img.shields.io/travis/wenmobo/WBLoadingIndicatorView.svg?style=flat)](https://travis-ci.org/wenmobo/WBLoadingIndicatorView)
-[![Version](https://img.shields.io/cocoapods/v/WBLoadingIndicatorView.svg?style=flat)](https://cocoapods.org/pods/WBLoadingIndicatorView)
-[![License](https://img.shields.io/cocoapods/l/WBLoadingIndicatorView.svg?style=flat)](https://cocoapods.org/pods/WBLoadingIndicatorView)
-[![Platform](https://img.shields.io/cocoapods/p/WBLoadingIndicatorView.svg?style=flat)](https://cocoapods.org/pods/WBLoadingIndicatorView)
+<p align="left">
+<a href="https://travis-ci.org/wenmobo/WBLoadingIndicatorView"><img src="https://travis-ci.org/wenmobo/WBLoadingIndicatorView.svg?style=flat?branch=master"></a>
+<a href="https://travis-ci.org/wenmobo/WBLoadingIndicatorView"><img src="https://img.shields.io/badge/cocoapods-supported-4BC51D.svg?style=flatt"></a>
+<a  href="https://cocoapods.org/pods/WBLoadingIndicatorView"><img src ="https://img.shields.io/cocoapods/v/WBLoadingIndicatorView.svg?style=flat"> </a>
+<a  href="https://cocoapods.org/pods/WBLoadingIndicatorView"><img src ="https://img.shields.io/packagist/l/doctrine/orm.svg?style=flat"> </a>
+<a  href="https://cocoapods.org/pods/WBLoadingIndicatorView"><img src ="https://img.shields.io/cocoapods/p/WBLoadingIndicatorView.svg?style=flat"> </a>
+<a  href="https://cocoapods.org/pods/WBLoadingIndicatorView"><img src ="https://img.shields.io/badge/language-objctive--c-red.svg?style=flat"> </a>
+</p>
 
-## Example
+
+## 中文说明
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 

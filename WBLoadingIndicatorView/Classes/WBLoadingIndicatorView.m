@@ -105,6 +105,7 @@ static const CGFloat WBDefaultPadding = 5.f;
     self.bezelView = ({
         WBLoadingBackgroundView *bezelView = [WBLoadingBackgroundView new];
         bezelView.translatesAutoresizingMaskIntoConstraints = NO;
+        bezelView.layer.cornerRadius = 5.f;
         bezelView.alpha = 0.f;
         [self addSubview:bezelView];
         bezelView;
@@ -449,7 +450,6 @@ static const CGFloat WBDefaultPadding = 5.f;
     [self.indicator.layer removeAllAnimations];
     [self.indicator.layer.sublayers makeObjectsPerformSelector:@selector(removeFromSuperlayer)];
     
-    self.indicator.backgroundColor = [UIColor cyanColor];
     [WBActivityIndicatorManager wb_showIndicatorAnimationToLayer:self.indicator.layer
                                                             type:self.type
                                                             size:self.indicatorSize
