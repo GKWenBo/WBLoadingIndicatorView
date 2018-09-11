@@ -12,7 +12,7 @@
 ## 中文说明
 
 <div align="center">
-<img src="https://ws2.sinaimg.cn/large/0069RVTdly1fv5vfzum5xg308p0i2aak.gif" width="200" align="center"><img src="https://ws4.sinaimg.cn/large/0069RVTdly1fv5vhwysnfg308p0i2dgd.gif" width="200" align="center"><img src="https://ws4.sinaimg.cn/large/0069RVTdly1fv5vw05y8cg308p0i2wf5.gif" width="200" align="center"><img src="https://ws1.sinaimg.cn/large/0069RVTdly1fv5vwliqtyg308p0i276d.gif" width="200 align="center"">
+<img src="https://ws2.sinaimg.cn/large/0069RVTdly1fv5vfzum5xg308p0i2aak.gif" width="300" align="center"><img src="https://ws4.sinaimg.cn/large/0069RVTdly1fv5vhwysnfg308p0i2dgd.gif" width="300" align="center"><img src="https://ws4.sinaimg.cn/large/0069RVTdly1fv5vw05y8cg308p0i2wf5.gif" width="200" align="300"><img src="https://ws1.sinaimg.cn/large/0069RVTdly1fv5vwliqtyg308p0i276d.gif" width="300 align="center"">
 </div>
 
 基于CALayer封装加载等待动画，目前支持6种类型动画：
