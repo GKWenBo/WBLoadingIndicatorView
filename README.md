@@ -52,8 +52,17 @@ pod 'WBLoadingIndicatorView'
 将**WBLoadingIndicatorView**文件夹拖入工程即可。
 
 ## Usage
-具体效果与使用，请查看demo.
 
+- 使用示例
+```
+WBLoadingIndicatorView *indicatorView = [self createIndicatorViewWithType:WBWBLoadingAnimationBallTrianglePathType
+indicatorSize:CGSizeMake(50, 50)
+toView:self.view];
+indicatorView.type = WBLoadingAnimationcircleStrokeSpinType;
+indicatorView.backgroundView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.3];
+indicatorView.contentColor = [UIColor whiteColor];
+indicatorView.bezelView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.7f];
+```
 ## Author
 
 author：wenbo    
