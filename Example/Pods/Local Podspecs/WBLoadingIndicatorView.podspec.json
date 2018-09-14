@@ -1,8 +1,7 @@
 {
   "name": "WBLoadingIndicatorView",
-  "version": "0.1.0",
-  "summary": "A short description of WBLoadingIndicatorView.",
-  "description": "TODO: Add long description of the pod here.",
+  "version": "1.1.0",
+  "summary": "一组精美的加载等待动画",
   "homepage": "https://github.com/wenmobo/WBLoadingIndicatorView",
   "license": {
     "type": "MIT",
@@ -13,10 +12,16 @@
   },
   "source": {
     "git": "https://github.com/wenmobo/WBLoadingIndicatorView.git",
-    "tag": "0.1.0"
+    "tag": "1.1.0"
   },
+  "social_media_url": "http://blogwenbo.com/",
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "WBLoadingIndicatorView/Classes/**/*"
+  "source_files": "WBLoadingIndicatorView/Classes/**/*",
+  "frameworks": [
+    "UIKit",
+    "QuartzCore"
+  ],
+  "requires_arc": true
 }

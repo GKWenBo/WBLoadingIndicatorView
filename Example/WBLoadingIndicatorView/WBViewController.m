@@ -7,7 +7,7 @@
 //
 
 #import "WBViewController.h"
-#import <WBLoadingIndicatorView/WBLoadingIndicatorView.h>
+#import "WBLoadingIndicatorView.h"
 
 @interface WBViewController () <UITableViewDelegate,UITableViewDataSource>
 {
@@ -52,10 +52,10 @@
     switch (indexPath.row) {
         case 0:
         {//contentColor
-            WBLoadingIndicatorView *indicatorView = [self createIndicatorViewWithType:WBWBLoadingAnimationBallTrianglePathType
+            WBLoadingIndicatorView *indicatorView = [self createIndicatorViewWithType:WBWBLoadingAnimationBallTrianglePath
                                                                         indicatorSize:CGSizeMake(50, 50)
                                                                                toView:self.view];
-            indicatorView.type = WBLoadingAnimationcircleStrokeSpinType;
+            indicatorView.type = WBLoadingAnimationcircleStrokeSpin;
             indicatorView.backgroundView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.3];
             indicatorView.contentColor = [UIColor whiteColor];
             indicatorView.bezelView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.7f];
@@ -63,10 +63,10 @@
             break;
         case 1:
         {//indicatorSize
-            WBLoadingIndicatorView *indicatorView = [self createIndicatorViewWithType:WBWBLoadingAnimationBallTrianglePathType
+            WBLoadingIndicatorView *indicatorView = [self createIndicatorViewWithType:WBWBLoadingAnimationBallTrianglePath
                                                                         indicatorSize:CGSizeMake(50, 50)
                                                                                toView:self.view];
-            indicatorView.type = WBWBLoadingAnimationBallPulseType;
+            indicatorView.type = WBWBLoadingAnimationBallPulse;
             indicatorView.backgroundView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.3];
             indicatorView.contentColor = [UIColor whiteColor];
             indicatorView.bezelView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.7f];
@@ -75,10 +75,10 @@
             break;
         case 2:
         {//to window
-            WBLoadingIndicatorView *indicatorView = [self createIndicatorViewWithType:WBWBLoadingAnimationBallTrianglePathType
+            WBLoadingIndicatorView *indicatorView = [self createIndicatorViewWithType:WBWBLoadingAnimationBallTrianglePath
                                                                         indicatorSize:CGSizeMake(50, 50)
                                                                                toView:self.view];
-            indicatorView.type = WBWBLoadingAnimationBallClipRotateType;
+            indicatorView.type = WBWBLoadingAnimationBallClipRotate;
             indicatorView.backgroundView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.3];
             indicatorView.contentColor = [UIColor whiteColor];
             indicatorView.bezelView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.7f];
@@ -87,10 +87,10 @@
             break;
         case 3:
         {
-            WBLoadingIndicatorView *indicatorView = [self createIndicatorViewWithType:WBWBLoadingAnimationBallTrianglePathType
+            WBLoadingIndicatorView *indicatorView = [self createIndicatorViewWithType:WBWBLoadingAnimationBallTrianglePath
                                                                         indicatorSize:CGSizeMake(50, 50)
                                                                                toView:self.view.window];
-            indicatorView.type = WBWBLoadingAnimationBallClipRotatePulseType;
+            indicatorView.type = WBWBLoadingAnimationBallClipRotatePulse;
             indicatorView.backgroundView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.3];
             indicatorView.contentColor = [UIColor whiteColor];
             indicatorView.bezelView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.7f];
@@ -102,10 +102,10 @@
             break;
         case 4:
         {
-            WBLoadingIndicatorView *indicatorView = [self createIndicatorViewWithType:WBWBLoadingAnimationBallTrianglePathType
+            WBLoadingIndicatorView *indicatorView = [self createIndicatorViewWithType:WBWBLoadingAnimationBallTrianglePath
                                                                         indicatorSize:CGSizeMake(50, 50)
                                                                                toView:self.view];
-            indicatorView.type = WBWBLoadingAnimationBallClipRotateMultipleType;
+            indicatorView.type = WBWBLoadingAnimationBallClipRotateMultiple;
             indicatorView.backgroundView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.3];
             indicatorView.contentColor = [UIColor whiteColor];
 //            indicatorView.bezelView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.7f];
@@ -113,10 +113,10 @@
             break;
         case 5:
         {
-            WBLoadingIndicatorView *indicatorView = [self createIndicatorViewWithType:WBWBLoadingAnimationBallTrianglePathType
+            WBLoadingIndicatorView *indicatorView = [self createIndicatorViewWithType:WBWBLoadingAnimationBallTrianglePath
                                                                         indicatorSize:CGSizeMake(50, 50)
                                                                                toView:self.view];
-            indicatorView.type = WBWBLoadingAnimationBallTrianglePathType;
+            indicatorView.type = WBWBLoadingAnimationBallTrianglePath;
             indicatorView.backgroundView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.3];
             indicatorView.bezelView.style = WBLoadingIndicatorBackgroundSolidStyle;
             indicatorView.bezelView.backgroundColor = [UIColor clearColor];

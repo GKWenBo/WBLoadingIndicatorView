@@ -10,8 +10,10 @@
 #endif
 #endif
 
-#import "WBActivityIndicatorManager.h"
 #import "WBActivityIndicatorShape.h"
+#import "WBAnimationIndicatorBaseView.h"
+#import "WBAnimationIndicatorCircleStrokeSpin.h"
+#import "WBIndicatorViewProtocol.h"
 #import "WBLoadingIndicatorView.h"
 
 FOUNDATION_EXPORT double WBLoadingIndicatorViewVersionNumber;

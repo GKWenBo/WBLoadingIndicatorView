@@ -7,12 +7,13 @@
 //
 
 #import "WBLoadingIndicatorView.h"
+#import "WBIndicatorContainerView.h"
 
 static const CGFloat WBDefaultPadding = 5.f;
 
 @interface WBLoadingIndicatorView ()
 
-@property (nonatomic, strong) UIView *indicator;
+@property (nonatomic, strong) WBIndicatorContainerView *animationView;
 @property (nonatomic, strong) NSArray *bezelConstraints;
 @property (nonatomic, strong) UIView *topSpacer;
 @property (nonatomic, strong) UIView *bottomSpacer;
@@ -74,7 +75,7 @@ static const CGFloat WBDefaultPadding = 5.f;
 - (void)commonInit {
     _margin = 20.f;
     _indicatorSize = CGSizeMake(35, 35);
-    _type = WBLoadingAnimationcircleStrokeSpinType;
+    _type = WBLoadingAnimationcircleStrokeSpin;
     _removeFromSuperViewOnHide = YES;
     BOOL isLegacy = kCFCoreFoundationVersionNumber < kCFCoreFoundationVersionNumber_iOS_7_0;
     _contentColor = isLegacy ? [UIColor whiteColor] : [UIColor colorWithWhite:0.f alpha:0.7f];
@@ -145,13 +146,14 @@ static const CGFloat WBDefaultPadding = 5.f;
         bottomSpacer;
     });
     
-    self.indicator = ({
-        UIView *indicator = [UIView new];
-        indicator.translatesAutoresizingMaskIntoConstraints = NO;
-        [self.bezelView addSubview:indicator];
-        indicator;
+    self.animationView = ({
+        WBIndicatorContainerView *animationView = [WBIndicatorContainerView wb_animationViewWithType:_type
+                                                                                                size:_indicatorSize
+                                                                                               color:_indicatorColor ? :defaultColor];
+        animationView.translatesAutoresizingMaskIntoConstraints = NO;
+        [self.bezelView addSubview:animationView];
+        animationView;
     });
-    
 }
 
 // MARK:Layout
@@ -159,7 +161,7 @@ static const CGFloat WBDefaultPadding = 5.f;
     UIView *bezel = self.bezelView;
     UIView *topSpacer = self.topSpacer;
     UIView *bottomSpacer = self.bottomSpacer;
-    UIView *indicator = self.indicator;
+    UIView *indicator = self.animationView;
     UILabel *label = self.label;
     
     CGFloat margin = self.margin;
@@ -386,12 +388,18 @@ static const CGFloat WBDefaultPadding = 5.f;
     }
 }
 
+// MARK:View HierarchyH
+- (void)willMoveToSuperview:(UIView *)newSuperview {
+    if (newSuperview) {
+        self.frame = newSuperview.bounds;
+    }
+}
+
 // MARK:Show
 - (void)wb_showLoadingView:(BOOL)animated {
     /** < Remove layer animations. > */
     [self.bezelView.layer removeAllAnimations];
     [self.backgroundView.layer removeAllAnimations];
-    [self.indicator.layer removeAllAnimations];
     
     if (animated) {
         [UIView animateWithDuration:0.3f
@@ -448,13 +456,11 @@ static const CGFloat WBDefaultPadding = 5.f;
     /** < Remove layer animations. > */
     [self.bezelView.layer removeAllAnimations];
     [self.backgroundView.layer removeAllAnimations];
-    [self.indicator.layer removeAllAnimations];
-    [self.indicator.layer.sublayers makeObjectsPerformSelector:@selector(removeFromSuperlayer)];
     
-    [WBActivityIndicatorManager wb_showIndicatorAnimationToLayer:self.indicator.layer
-                                                            type:self.type
-                                                            size:self.indicatorSize
-                                                           color:self.indicatorColor ? : self.contentColor];
+    self.animationView.type = _type;
+    self.animationView.size = _indicatorSize;
+    self.animationView.color = _indicatorColor ? : _contentColor;
+    
     [self setNeedsUpdateConstraints];
 }
 

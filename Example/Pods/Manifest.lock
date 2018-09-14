@@ -1,5 +1,5 @@
 PODS:
-  - WBLoadingIndicatorView (0.1.0)
+  - WBLoadingIndicatorView (1.1.0)
 
 DEPENDENCIES:
   - WBLoadingIndicatorView (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  WBLoadingIndicatorView: 8cec3aa1b743176fc4d1137aad80040956c8ecf0
+  WBLoadingIndicatorView: 7e86518074cb430138c99295f46feac1ff5b6d12
 
 PODFILE CHECKSUM: c451a4d41158f0f75a06554e234adae522cbf209
 

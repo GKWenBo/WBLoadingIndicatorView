@@ -7,12 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "WBActivityIndicatorManager.h"
+
 @class WBLoadingBackgroundView;
 
 typedef NS_ENUM(NSInteger, WBLoadingIndicatorBackgroundStyle) {
     WBLoadingIndicatorBackgroundSolidStyle,
     WBLoadingIndicatorBackgroundBlurStyle
+};
+
+typedef NS_ENUM(NSInteger, WBLoadingAnimationType) {
+    WBLoadingAnimationcircleStrokeSpin,
+    WBWBLoadingAnimationBallPulse,
+    WBWBLoadingAnimationBallClipRotate,
+    WBWBLoadingAnimationBallClipRotatePulse,
+    WBWBLoadingAnimationBallClipRotateMultiple,
+    WBWBLoadingAnimationBallTrianglePath
 };
 
 @interface WBLoadingIndicatorView : UIView
@@ -40,7 +49,7 @@ typedef NS_ENUM(NSInteger, WBLoadingIndicatorBackgroundStyle) {
 @property (nonatomic, assign) BOOL square UI_APPEARANCE_SELECTOR;
 /** < 隐藏时从父视图移除 默认：YES > */
 @property (nonatomic, assign) BOOL removeFromSuperViewOnHide;
-/*  < 动画类型 > */
+/*  < 动画类型 默认： WBLoadingAnimationcircleStrokeSpin> */
 @property (nonatomic, assign) WBLoadingAnimationType type;
 
 // MARK:Class Methods
