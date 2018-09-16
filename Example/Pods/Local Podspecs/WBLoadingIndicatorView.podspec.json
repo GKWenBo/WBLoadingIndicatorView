@@ -18,10 +18,16 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "WBLoadingIndicatorView/Classes/**/*",
+  "source_files": "WBLoadingIndicatorView/**/*.{h,m}",
   "frameworks": [
     "UIKit",
     "QuartzCore"
   ],
-  "requires_arc": true
+  "requires_arc": true,
+  "subspecs": [
+    {
+      "name": "WBAnimations",
+      "source_files": "WBLoadingIndicatorView/WBAnimations/**/*.{h,m}"
+    }
+  ]
 }

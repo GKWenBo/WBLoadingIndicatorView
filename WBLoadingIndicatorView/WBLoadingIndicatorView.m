@@ -388,7 +388,7 @@ static const CGFloat WBDefaultPadding = 5.f;
     }
 }
 
-// MARK:View HierarchyH
+// MARK:View Hierarchy
 - (void)willMoveToSuperview:(UIView *)newSuperview {
     if (newSuperview) {
         self.frame = newSuperview.bounds;

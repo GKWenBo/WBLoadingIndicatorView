@@ -22,8 +22,8 @@
     CFTimeInterval duration = 1.5f;
     
     UIColor *color1 = [color colorWithAlphaComponent:1.f];
-    UIColor *color2 = [color colorWithAlphaComponent:0.6];
-    UIColor *color3 = [color colorWithAlphaComponent:0.6];
+    UIColor *color2 = [color colorWithAlphaComponent:0.6f];
+    UIColor *color3 = [color colorWithAlphaComponent:0.6f];
     
     CAShapeLayer *circle1 = (CAShapeLayer *)[WBActivityIndicatorShape layerWith:CGSizeMake(circleSize, circleSize)
                                                                           color:color1
@@ -110,7 +110,8 @@
     colorAnim.fillMode = kCAFillModeForwards;
     colorAnim.removedOnCompletion = NO;
     colorAnim.repeatCount = HUGE;
-    [layer addAnimation:colorAnim forKey:@"fillColor"];
+    [layer addAnimation:colorAnim
+                 forKey:@"fillColor"];
 }
 
 - (void)wb_viewMovePathAnimWith:(CALayer *)layer

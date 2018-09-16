@@ -32,6 +32,7 @@ WBWBLoadingAnimationBallClipRotateType,
 WBWBLoadingAnimationBallClipRotatePulseType,
 WBWBLoadingAnimationBallClipRotateMultipleType,
 WBWBLoadingAnimationBallTrianglePathType
+WBLoadingAnimationBallSurround
 };
 ```
 
@@ -74,8 +75,8 @@ QQ：1050794513
 email：1050794513@qq.com
 
 ## 更新
-
-  > - 2018-09-11 （1.0.1）：添加背景模糊效果
+> - 2018-09-16 （1.1.1）：重构，添加WBLoadingAnimationBallSurround动画
+> - 2018-09-11 （1.0.1）：添加背景模糊效果
 
 ## License
 
