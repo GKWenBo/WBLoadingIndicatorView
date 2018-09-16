@@ -12,7 +12,6 @@
 ## 中文说明
 
 <div align="center">
-<video src="file://WBLoadingAnimationcircleStrokeSpinType">
 <br>
 <img src="https://ws3.sinaimg.cn/large/006tNc79ly1fvbhaifmdwg308p0i20t0.gif" width="300" align="center"><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fvbhc6194cg308p0i23yp.gif" width="300" align="center">
 <br>
