@@ -12,11 +12,12 @@
 
 /**
  显示加载动画
- 
+ @param layer 父layer
  @param size 加载动画大小
  @param color 加载动画颜色
  */
-- (CALayer *)wb_addAnimationSize:(CGSize)size
+- (void)wb_addAnimationWithLayer:(CALayer *)layer
+                            size:(CGSize)size
                            color:(UIColor *)color;
 
 @end

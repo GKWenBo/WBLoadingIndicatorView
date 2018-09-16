@@ -17,11 +17,12 @@ typedef NS_ENUM(NSInteger, WBLoadingIndicatorBackgroundStyle) {
 
 typedef NS_ENUM(NSInteger, WBLoadingAnimationType) {
     WBLoadingAnimationcircleStrokeSpin,
-    WBWBLoadingAnimationBallPulse,
-    WBWBLoadingAnimationBallClipRotate,
-    WBWBLoadingAnimationBallClipRotatePulse,
-    WBWBLoadingAnimationBallClipRotateMultiple,
-    WBWBLoadingAnimationBallTrianglePath
+    WBLoadingAnimationBallPulse,
+    WBLoadingAnimationBallClipRotate,
+    WBLoadingAnimationBallClipRotatePulse,
+    WBLoadingAnimationBallClipRotateMultiple,
+    WBLoadingAnimationBallTrianglePath,
+    WBLoadingAnimationBallSurround
 };
 
 @interface WBLoadingIndicatorView : UIView

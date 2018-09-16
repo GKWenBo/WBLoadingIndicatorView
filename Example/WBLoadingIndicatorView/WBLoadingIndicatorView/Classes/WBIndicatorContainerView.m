@@ -8,6 +8,12 @@
 
 #import "WBIndicatorContainerView.h"
 #import "WBAnimationIndicatorCircleStrokeSpin.h"
+#import "WBAnimationIndicatorBallPulse.h"
+#import "WBAnimationIndicatorBallClipRotate.h"
+#import "WBAnimationIndicatorBallClipRotatePulse.h"
+#import "WBAnimationIndicatorBallClipRotateMultiple.h"
+#import "WBAnimationIndicatorBallTrianglePath.h"
+#import "WBAnimationIndicatorBallSurround.h"
 
 @implementation WBIndicatorContainerView
 
@@ -40,13 +46,60 @@
         case WBLoadingAnimationcircleStrokeSpin:
         {
             WBAnimationIndicatorCircleStrokeSpin *circleStrokeSpin = [WBAnimationIndicatorCircleStrokeSpin new];
-            CALayer *layer = [circleStrokeSpin wb_addAnimationSize:_size
-                                                             color:_color];
-            layer.frame = CGRectMake((rect.size.width - _size.width) / 2.f, (rect.size.height - _size.height) / 2.f, _size.width, _size.height);
-            [self.layer addSublayer:layer];
+            [circleStrokeSpin wb_addAnimationWithLayer:self.layer
+                                                  size:_size
+                                                 color:_color];
         }
             break;
+        case WBLoadingAnimationBallPulse:
+        {
+            WBAnimationIndicatorBallPulse *ballPulse = [WBAnimationIndicatorBallPulse new];
+            [ballPulse wb_addAnimationWithLayer:self.layer
+                                           size:_size
+                                          color:_color];
+        }
+            break;
+        case WBLoadingAnimationBallClipRotate:
+        {
+            WBAnimationIndicatorBallClipRotate *ballClipRotate = [WBAnimationIndicatorBallClipRotate new];
+            [ballClipRotate wb_addAnimationWithLayer:self.layer
+                                                size:_size
+                                               color:_color];
+        }
+            break;
+        case WBLoadingAnimationBallClipRotatePulse:
+        {
+            WBAnimationIndicatorBallClipRotatePulse *ballClipRotatePulse = [WBAnimationIndicatorBallClipRotatePulse new];
+            [ballClipRotatePulse wb_addAnimationWithLayer:self.layer
+                                                     size:_size
+                                                    color:_color];
+        }
+            break;
+        case WBLoadingAnimationBallClipRotateMultiple:
+        {
+            WBAnimationIndicatorBallClipRotateMultiple *ballClipRotateMultiple = [WBAnimationIndicatorBallClipRotateMultiple new];
+            [ballClipRotateMultiple wb_addAnimationWithLayer:self.layer
+                                                        size:_size
+                                                       color:_color];
+        }
+            break;
+        case WBLoadingAnimationBallTrianglePath:
+        {
+            WBAnimationIndicatorBallTrianglePath *ballTrianglePath = [WBAnimationIndicatorBallTrianglePath new];
+            [ballTrianglePath wb_addAnimationWithLayer:self.layer
+                                                  size:_size
+                                                 color:_color];
+        }
+            break;
+        case WBLoadingAnimationBallSurround:
+        {
+            WBAnimationIndicatorBallSurround *ballSurround = [WBAnimationIndicatorBallSurround new];
+            [ballSurround wb_addAnimationWithLayer:self.layer
+                                              size:_size
+                                             color:_color];
             
+        }
+            break;
         default:
             break;
     }
@@ -69,6 +122,7 @@
 
 - (void)setType:(WBLoadingAnimationType)type {
     if (type != _type) {
+        _type = type;
         [self setNeedsDisplay];
     }
 }

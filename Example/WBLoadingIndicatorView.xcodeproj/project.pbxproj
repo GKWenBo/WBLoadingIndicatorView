@@ -23,6 +23,12 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		739D0AE40D1B814AC7B32A99 /* Pods_WBLoadingIndicatorView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBA6F5145543DD49E558B09 /* Pods_WBLoadingIndicatorView_Example.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		C51FCEC9214D41DB00677FED /* WBAnimationIndicatorBallPulse.m in Sources */ = {isa = PBXBuildFile; fileRef = C51FCEC8214D41DB00677FED /* WBAnimationIndicatorBallPulse.m */; };
+		C51FCECE214D477B00677FED /* WBAnimationIndicatorBallClipRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = C51FCECD214D477B00677FED /* WBAnimationIndicatorBallClipRotate.m */; };
+		C51FCED1214D4BC000677FED /* WBAnimationIndicatorBallClipRotatePulse.m in Sources */ = {isa = PBXBuildFile; fileRef = C51FCED0214D4BC000677FED /* WBAnimationIndicatorBallClipRotatePulse.m */; };
+		C51FCED4214D4DB000677FED /* WBAnimationIndicatorBallClipRotateMultiple.m in Sources */ = {isa = PBXBuildFile; fileRef = C51FCED3214D4DB000677FED /* WBAnimationIndicatorBallClipRotateMultiple.m */; };
+		C51FCED7214D4F8000677FED /* WBAnimationIndicatorBallTrianglePath.m in Sources */ = {isa = PBXBuildFile; fileRef = C51FCED6214D4F8000677FED /* WBAnimationIndicatorBallTrianglePath.m */; };
+		C51FCEDD214D540900677FED /* WBAnimationIndicatorBallSurround.m in Sources */ = {isa = PBXBuildFile; fileRef = C51FCEDC214D540900677FED /* WBAnimationIndicatorBallSurround.m */; };
 		D09F717A214B883900FD7B0A /* WBIndicatorContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D09F7179214B883900FD7B0A /* WBIndicatorContainerView.m */; };
 		D0BC2726214B7FF300C6A927 /* WBLoadingIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = D0BC2719214B7FF300C6A927 /* WBLoadingIndicatorView.m */; };
 		D0BC2727214B7FF300C6A927 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = D0BC271B214B7FF300C6A927 /* .gitkeep */; };
@@ -70,6 +76,18 @@
 		9D5CE9C095F964E8EF6B966C /* Pods_WBLoadingIndicatorView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBLoadingIndicatorView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFDF77C99876360744F4F9BD /* Pods-WBLoadingIndicatorView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBLoadingIndicatorView_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WBLoadingIndicatorView_Tests/Pods-WBLoadingIndicatorView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B6F9C29A38B0F123AAF5AABC /* Pods-WBLoadingIndicatorView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBLoadingIndicatorView_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WBLoadingIndicatorView_Tests/Pods-WBLoadingIndicatorView_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		C51FCEC7214D41DB00677FED /* WBAnimationIndicatorBallPulse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBAnimationIndicatorBallPulse.h; sourceTree = "<group>"; };
+		C51FCEC8214D41DB00677FED /* WBAnimationIndicatorBallPulse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBAnimationIndicatorBallPulse.m; sourceTree = "<group>"; };
+		C51FCECA214D46DA00677FED /* WBAnimationIndicatorBallClipRotate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBAnimationIndicatorBallClipRotate.h; sourceTree = "<group>"; };
+		C51FCECD214D477B00677FED /* WBAnimationIndicatorBallClipRotate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WBAnimationIndicatorBallClipRotate.m; sourceTree = "<group>"; };
+		C51FCECF214D4BC000677FED /* WBAnimationIndicatorBallClipRotatePulse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBAnimationIndicatorBallClipRotatePulse.h; sourceTree = "<group>"; };
+		C51FCED0214D4BC000677FED /* WBAnimationIndicatorBallClipRotatePulse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBAnimationIndicatorBallClipRotatePulse.m; sourceTree = "<group>"; };
+		C51FCED2214D4DB000677FED /* WBAnimationIndicatorBallClipRotateMultiple.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBAnimationIndicatorBallClipRotateMultiple.h; sourceTree = "<group>"; };
+		C51FCED3214D4DB000677FED /* WBAnimationIndicatorBallClipRotateMultiple.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBAnimationIndicatorBallClipRotateMultiple.m; sourceTree = "<group>"; };
+		C51FCED5214D4F8000677FED /* WBAnimationIndicatorBallTrianglePath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBAnimationIndicatorBallTrianglePath.h; sourceTree = "<group>"; };
+		C51FCED6214D4F8000677FED /* WBAnimationIndicatorBallTrianglePath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBAnimationIndicatorBallTrianglePath.m; sourceTree = "<group>"; };
+		C51FCEDB214D540900677FED /* WBAnimationIndicatorBallSurround.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBAnimationIndicatorBallSurround.h; sourceTree = "<group>"; };
+		C51FCEDC214D540900677FED /* WBAnimationIndicatorBallSurround.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBAnimationIndicatorBallSurround.m; sourceTree = "<group>"; };
 		D09F7178214B883900FD7B0A /* WBIndicatorContainerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WBIndicatorContainerView.h; sourceTree = "<group>"; };
 		D09F7179214B883900FD7B0A /* WBIndicatorContainerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WBIndicatorContainerView.m; sourceTree = "<group>"; };
 		D09F717B214BBCC300FD7B0A /* WBIndicatorViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WBIndicatorViewProtocol.h; sourceTree = "<group>"; };
@@ -244,6 +262,18 @@
 				D0BC2735214B83F100C6A927 /* WBActivityIndicatorShape.m */,
 				D0BC2738214B843F00C6A927 /* WBAnimationIndicatorCircleStrokeSpin.h */,
 				D0BC2739214B843F00C6A927 /* WBAnimationIndicatorCircleStrokeSpin.m */,
+				C51FCEC7214D41DB00677FED /* WBAnimationIndicatorBallPulse.h */,
+				C51FCEC8214D41DB00677FED /* WBAnimationIndicatorBallPulse.m */,
+				C51FCECA214D46DA00677FED /* WBAnimationIndicatorBallClipRotate.h */,
+				C51FCECD214D477B00677FED /* WBAnimationIndicatorBallClipRotate.m */,
+				C51FCECF214D4BC000677FED /* WBAnimationIndicatorBallClipRotatePulse.h */,
+				C51FCED0214D4BC000677FED /* WBAnimationIndicatorBallClipRotatePulse.m */,
+				C51FCED2214D4DB000677FED /* WBAnimationIndicatorBallClipRotateMultiple.h */,
+				C51FCED3214D4DB000677FED /* WBAnimationIndicatorBallClipRotateMultiple.m */,
+				C51FCED5214D4F8000677FED /* WBAnimationIndicatorBallTrianglePath.h */,
+				C51FCED6214D4F8000677FED /* WBAnimationIndicatorBallTrianglePath.m */,
+				C51FCEDB214D540900677FED /* WBAnimationIndicatorBallSurround.h */,
+				C51FCEDC214D540900677FED /* WBAnimationIndicatorBallSurround.m */,
 			);
 			path = WBAnimations;
 			sourceTree = "<group>";
@@ -399,12 +429,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* WBAppDelegate.m in Sources */,
+				C51FCED7214D4F8000677FED /* WBAnimationIndicatorBallTrianglePath.m in Sources */,
 				D09F717A214B883900FD7B0A /* WBIndicatorContainerView.m in Sources */,
+				C51FCEDD214D540900677FED /* WBAnimationIndicatorBallSurround.m in Sources */,
+				C51FCED4214D4DB000677FED /* WBAnimationIndicatorBallClipRotateMultiple.m in Sources */,
 				D0BC273A214B843F00C6A927 /* WBAnimationIndicatorCircleStrokeSpin.m in Sources */,
 				D0BC2737214B83F100C6A927 /* WBActivityIndicatorShape.m in Sources */,
+				C51FCECE214D477B00677FED /* WBAnimationIndicatorBallClipRotate.m in Sources */,
+				C51FCEC9214D41DB00677FED /* WBAnimationIndicatorBallPulse.m in Sources */,
 				6003F5A7195388D20070C39A /* WBViewController.m in Sources */,
 				D0BC2726214B7FF300C6A927 /* WBLoadingIndicatorView.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				C51FCED1214D4BC000677FED /* WBAnimationIndicatorBallClipRotatePulse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
