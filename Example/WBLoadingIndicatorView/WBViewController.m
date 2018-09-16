@@ -126,15 +126,13 @@
             break;
         case WBLoadingAnimationBallSurround:
         {
-            WBLoadingIndicatorView *indicatorView = [self createIndicatorViewWithType:WBLoadingAnimationBallTrianglePath
-                                                                        indicatorSize:CGSizeMake(50, 50)
-                                                                               toView:self.view];
+            WBLoadingIndicatorView *indicatorView = [WBLoadingIndicatorView wb_showIndicatorAddTo:self.view];
             indicatorView.type = WBLoadingAnimationBallSurround;
+            indicatorView.indicatorSize = CGSizeMake(45, 45);
             indicatorView.backgroundView.backgroundColor = [UIColor whiteColor];
             indicatorView.bezelView.style = WBLoadingIndicatorBackgroundSolidStyle;
             indicatorView.bezelView.backgroundColor = [UIColor clearColor];
             indicatorView.indicatorColor = [UIColor orangeColor];
-            indicatorView.label.text = nil;
         }
             break;
         default:

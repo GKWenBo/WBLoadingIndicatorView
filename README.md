@@ -31,7 +31,7 @@ WBWBLoadingAnimationBallPulseType,
 WBWBLoadingAnimationBallClipRotateType,
 WBWBLoadingAnimationBallClipRotatePulseType,
 WBWBLoadingAnimationBallClipRotateMultipleType,
-WBWBLoadingAnimationBallTrianglePathType
+WBWBLoadingAnimationBallTrianglePathType,
 WBLoadingAnimationBallSurround
 };
 ```
@@ -59,14 +59,14 @@ pod 'WBLoadingIndicatorView'
 ## Usage
 
 - 使用示例
-```
-WBLoadingIndicatorView *indicatorView = [self createIndicatorViewWithType:WBWBLoadingAnimationBallTrianglePathType
-indicatorSize:CGSizeMake(50, 50)
-toView:self.view];
-indicatorView.type = WBLoadingAnimationcircleStrokeSpinType;
-indicatorView.backgroundView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.3];
-indicatorView.contentColor = [UIColor whiteColor];
-indicatorView.bezelView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.7f];
+```objc
+WBLoadingIndicatorView *indicatorView = [WBLoadingIndicatorView wb_showIndicatorAddTo:self.view];
+indicatorView.type = WBLoadingAnimationBallSurround;
+indicatorView.indicatorSize = CGSizeMake(45, 45);
+indicatorView.backgroundView.backgroundColor = [UIColor whiteColor];
+indicatorView.bezelView.style = WBLoadingIndicatorBackgroundSolidStyle;
+indicatorView.bezelView.backgroundColor = [UIColor clearColor];
+indicatorView.indicatorColor = [UIColor orangeColor];
 ```
 ## Author
 
