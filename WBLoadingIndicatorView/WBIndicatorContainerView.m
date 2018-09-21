@@ -41,6 +41,8 @@
 - (void)drawRect:(CGRect)rect {
     [self.layer removeAllAnimations];
     [self.layer.sublayers makeObjectsPerformSelector:@selector(removeFromSuperlayer)];
+    self.layer.sublayers = nil;
+    self.layer.speed = 1.f;
     
     switch (_type) {
         case WBLoadingAnimationcircleStrokeSpin:

@@ -151,6 +151,7 @@ static const CGFloat WBDefaultPadding = 5.f;
                                                                                                 size:_indicatorSize
                                                                                                color:_indicatorColor ? :defaultColor];
         animationView.translatesAutoresizingMaskIntoConstraints = NO;
+        animationView.alpha = 0.f;
         [self.bezelView addSubview:animationView];
         animationView;
     });
@@ -411,6 +412,7 @@ static const CGFloat WBDefaultPadding = 5.f;
                              self.alpha = 1.f;
                              self.bezelView.alpha = 1.f;
                              self.backgroundView.alpha = 1.f;
+                             self.animationView.alpha = 1.f;
                          }
                          completion:^(BOOL finished) {
                              
@@ -419,6 +421,7 @@ static const CGFloat WBDefaultPadding = 5.f;
         self.alpha = 1.f;
         self.bezelView.alpha = 1.f;
         self.backgroundView.alpha = 1.f;
+        self.animationView.alpha = 1.f;
     }
     
 }
@@ -435,6 +438,7 @@ static const CGFloat WBDefaultPadding = 5.f;
                              self.backgroundView.alpha = 0.f;
                              self.bezelView.alpha = 0.f;
                              self.alpha = 0.f;
+                             self.animationView.alpha = 0.f;
                          }
                          completion:^(BOOL finished) {
                              if (self.removeFromSuperViewOnHide) {
@@ -445,6 +449,7 @@ static const CGFloat WBDefaultPadding = 5.f;
         self.backgroundView.alpha = 0.f;
         self.bezelView.alpha = 0.f;
         self.alpha = 0.f;
+        self.animationView.alpha = 0.f;
         if (self.removeFromSuperViewOnHide) {
             [self removeFromSuperview];
         }
