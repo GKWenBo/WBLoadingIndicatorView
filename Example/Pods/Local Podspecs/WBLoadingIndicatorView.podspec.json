@@ -1,6 +1,6 @@
 {
   "name": "WBLoadingIndicatorView",
-  "version": "1.1.0",
+  "version": "1.1.4",
   "summary": "一组精美的加载等待动画",
   "homepage": "https://github.com/wenmobo/WBLoadingIndicatorView",
   "license": {
@@ -12,13 +12,13 @@
   },
   "source": {
     "git": "https://github.com/wenmobo/WBLoadingIndicatorView.git",
-    "tag": "1.1.0"
+    "tag": "1.1.4"
   },
   "social_media_url": "http://blogwenbo.com/",
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "WBLoadingIndicatorView/**/*.{h,m}",
+  "source_files": "WBLoadingIndicatorView/*.{h,m}",
   "frameworks": [
     "UIKit",
     "QuartzCore"
@@ -27,7 +27,7 @@
   "subspecs": [
     {
       "name": "WBAnimations",
-      "source_files": "WBLoadingIndicatorView/WBAnimations/**/*.{h,m}"
+      "source_files": "WBLoadingIndicatorView/WBAnimations/*.{h,m}"
     }
   ]
 }

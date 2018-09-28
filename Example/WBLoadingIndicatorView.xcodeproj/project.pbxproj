@@ -23,6 +23,7 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		739D0AE40D1B814AC7B32A99 /* Pods_WBLoadingIndicatorView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBBA6F5145543DD49E558B09 /* Pods_WBLoadingIndicatorView_Example.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		D0F4E941215E08A400E7EE1F /* timg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = D0F4E940215E08A400E7EE1F /* timg.jpeg */; };
 		F15F767E24EC3658B4FB7349 /* Pods_WBLoadingIndicatorView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D5CE9C095F964E8EF6B966C /* Pods_WBLoadingIndicatorView_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		9D5CE9C095F964E8EF6B966C /* Pods_WBLoadingIndicatorView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBLoadingIndicatorView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFDF77C99876360744F4F9BD /* Pods-WBLoadingIndicatorView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBLoadingIndicatorView_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WBLoadingIndicatorView_Tests/Pods-WBLoadingIndicatorView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B6F9C29A38B0F123AAF5AABC /* Pods-WBLoadingIndicatorView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBLoadingIndicatorView_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WBLoadingIndicatorView_Tests/Pods-WBLoadingIndicatorView_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		D0F4E940215E08A400E7EE1F /* timg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpeg; sourceTree = "<group>"; };
 		D36880CF50293547DE6E1B88 /* WBLoadingIndicatorView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = WBLoadingIndicatorView.podspec; path = ../WBLoadingIndicatorView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EBBA6F5145543DD49E558B09 /* Pods_WBLoadingIndicatorView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WBLoadingIndicatorView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F661548217DC558B1CDC3BDD /* Pods-WBLoadingIndicatorView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WBLoadingIndicatorView_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WBLoadingIndicatorView_Example/Pods-WBLoadingIndicatorView_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 		6003F594195388D20070C39A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D0F4E940215E08A400E7EE1F /* timg.jpeg */,
 				6003F595195388D20070C39A /* WBLoadingIndicatorView-Info.plist */,
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,
@@ -276,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0F4E941215E08A400E7EE1F /* timg.jpeg in Resources */,
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,

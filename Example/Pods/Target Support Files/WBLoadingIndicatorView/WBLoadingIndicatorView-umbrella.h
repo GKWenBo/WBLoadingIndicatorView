@@ -10,15 +10,6 @@
 #endif
 #endif
 
-#import "WBActivityIndicatorShape.h"
-#import "WBAnimationIndicatorBallClipRotate.h"
-#import "WBAnimationIndicatorBallClipRotateMultiple.h"
-#import "WBAnimationIndicatorBallClipRotatePulse.h"
-#import "WBAnimationIndicatorBallPulse.h"
-#import "WBAnimationIndicatorBallSurround.h"
-#import "WBAnimationIndicatorBallTrianglePath.h"
-#import "WBAnimationIndicatorCircleStrokeSpin.h"
-#import "WBIndicatorViewProtocol.h"
 #import "WBIndicatorContainerView.h"
 #import "WBLoadingIndicatorView.h"
 #import "WBActivityIndicatorShape.h"

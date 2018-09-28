@@ -9,6 +9,14 @@
 #import "WBLoadingIndicatorView.h"
 #import "WBIndicatorContainerView.h"
 
+#import "WBAnimationIndicatorCircleStrokeSpin.h"
+#import "WBAnimationIndicatorBallPulse.h"
+#import "WBAnimationIndicatorBallClipRotate.h"
+#import "WBAnimationIndicatorBallClipRotatePulse.h"
+#import "WBAnimationIndicatorBallClipRotateMultiple.h"
+#import "WBAnimationIndicatorBallTrianglePath.h"
+#import "WBAnimationIndicatorBallSurround.h"
+
 static const CGFloat WBDefaultPadding = 5.f;
 
 @interface WBLoadingIndicatorView ()
@@ -147,9 +155,7 @@ static const CGFloat WBDefaultPadding = 5.f;
     });
     
     self.animationView = ({
-        WBIndicatorContainerView *animationView = [WBIndicatorContainerView wb_animationViewWithType:_type
-                                                                                                size:_indicatorSize
-                                                                                               color:_indicatorColor ? :defaultColor];
+        WBIndicatorContainerView *animationView = [WBIndicatorContainerView new];
         animationView.translatesAutoresizingMaskIntoConstraints = NO;
         animationView.alpha = 0.f;
         [self.bezelView addSubview:animationView];
@@ -458,15 +464,82 @@ static const CGFloat WBDefaultPadding = 5.f;
 
 // MARK:Private Method
 - (void)updateIndicators {
-    /** < Remove layer animations. > */
-    [self.bezelView.layer removeAllAnimations];
-    [self.backgroundView.layer removeAllAnimations];
     
-    self.animationView.type = _type;
-    self.animationView.size = _indicatorSize;
-    self.animationView.color = _indicatorColor ? : _contentColor;
+    __weak typeof(self) weakSelf = self;
+    self.animationView.layoutEnd = ^{
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        /** < Remove layer animations. > */
+        [strongSelf.animationView.layer removeAllAnimations];
+        [strongSelf.animationView.layer.sublayers makeObjectsPerformSelector:@selector(removeFromSuperlayer)];
+        strongSelf.animationView.layer.sublayers = nil;
+        strongSelf.animationView.layer.speed = 1.f;
+        
+        /*  < 添加动画 > */
+        switch (strongSelf.type) {
+            case WBLoadingAnimationcircleStrokeSpin:
+            {
+                WBAnimationIndicatorCircleStrokeSpin *circleStrokeSpin = [WBAnimationIndicatorCircleStrokeSpin new];
+                [circleStrokeSpin wb_addAnimationWithLayer:strongSelf.animationView.layer
+                                                      size:strongSelf.indicatorSize
+                                                     color:strongSelf.indicatorColor ? :strongSelf.contentColor];
+            }
+                break;
+            case WBLoadingAnimationBallPulse:
+            {
+                WBAnimationIndicatorBallPulse *ballPulse = [WBAnimationIndicatorBallPulse new];
+                [ballPulse wb_addAnimationWithLayer:strongSelf.animationView.layer
+                                               size:strongSelf.indicatorSize
+                                              color:strongSelf.indicatorColor ? :strongSelf.contentColor];
+            }
+                break;
+            case WBLoadingAnimationBallClipRotate:
+            {
+                WBAnimationIndicatorBallClipRotate *ballClipRotate = [WBAnimationIndicatorBallClipRotate new];
+                [ballClipRotate wb_addAnimationWithLayer:strongSelf.animationView.layer
+                                                    size:strongSelf.indicatorSize
+                                                   color:strongSelf.indicatorColor ? :strongSelf.contentColor];
+            }
+                break;
+            case WBLoadingAnimationBallClipRotatePulse:
+            {
+                WBAnimationIndicatorBallClipRotatePulse *ballClipRotatePulse = [WBAnimationIndicatorBallClipRotatePulse new];
+                [ballClipRotatePulse wb_addAnimationWithLayer:strongSelf.animationView.layer
+                                                         size:strongSelf.indicatorSize
+                                                        color:strongSelf.indicatorColor ? :strongSelf.contentColor];
+            }
+                break;
+            case WBLoadingAnimationBallClipRotateMultiple:
+            {
+                WBAnimationIndicatorBallClipRotateMultiple *ballClipRotateMultiple = [WBAnimationIndicatorBallClipRotateMultiple new];
+                [ballClipRotateMultiple wb_addAnimationWithLayer:strongSelf.animationView.layer
+                                                            size:strongSelf.indicatorSize
+                                                           color:strongSelf.indicatorColor ? :strongSelf.contentColor];
+            }
+                break;
+            case WBLoadingAnimationBallTrianglePath:
+            {
+                WBAnimationIndicatorBallTrianglePath *ballTrianglePath = [WBAnimationIndicatorBallTrianglePath new];
+                [ballTrianglePath wb_addAnimationWithLayer:strongSelf.animationView.layer
+                                                      size:strongSelf.indicatorSize
+                                                     color:strongSelf.indicatorColor ? :strongSelf.contentColor];
+            }
+                break;
+            case WBLoadingAnimationBallSurround:
+            {
+                WBAnimationIndicatorBallSurround *ballSurround = [WBAnimationIndicatorBallSurround new];
+                [ballSurround wb_addAnimationWithLayer:strongSelf.animationView.layer
+                                                  size:strongSelf.indicatorSize
+                                                 color:strongSelf.indicatorColor ? :strongSelf.contentColor];
+
+            }
+                break;
+            default:
+                break;
+        }
+    };
     
     [self setNeedsUpdateConstraints];
+    [self.animationView setNeedsLayout];
 }
 
 - (void)updateViewForColor:(UIColor *)color {

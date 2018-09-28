@@ -1,7 +1,7 @@
 PODS:
-  - WBLoadingIndicatorView (1.1.0):
-    - WBLoadingIndicatorView/WBAnimations (= 1.1.0)
-  - WBLoadingIndicatorView/WBAnimations (1.1.0)
+  - WBLoadingIndicatorView (1.1.4):
+    - WBLoadingIndicatorView/WBAnimations (= 1.1.4)
+  - WBLoadingIndicatorView/WBAnimations (1.1.4)
 
 DEPENDENCIES:
   - WBLoadingIndicatorView (from `../`)
@@ -11,7 +11,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  WBLoadingIndicatorView: 901596e799f190d0144fb65a50dd9b4de6c77519
+  WBLoadingIndicatorView: f33a09af0dc9cc91beba64ca4ae83b6958a7b89b
 
 PODFILE CHECKSUM: c451a4d41158f0f75a06554e234adae522cbf209
 

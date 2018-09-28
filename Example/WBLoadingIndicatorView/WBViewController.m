@@ -24,6 +24,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    _tableView.backgroundColor = [UIColor clearColor];
+    _tableView.tableFooterView = [UIView new];
+    self.navigationController.navigationBar.translucent = YES;
+    self.view.layer.contents = (id)[UIImage imageNamed:@"timg.jpeg"].CGImage;
     
 }
 
@@ -39,6 +43,7 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault
                                      reuseIdentifier:kIdentifier];
     }
+    cell.contentView.backgroundColor = [UIColor clearColor];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.textLabel.text = self.typeArray[indexPath.row];
     return cell;
@@ -49,6 +54,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    _tableView.hidden = YES;
     switch (indexPath.row) {
         case 0:
         {//contentColor
@@ -56,7 +63,7 @@
                                                                         indicatorSize:CGSizeMake(35, 35)
                                                                                toView:self.view];
             indicatorView.type = WBLoadingAnimationcircleStrokeSpin;
-            indicatorView.backgroundView.backgroundColor = [UIColor whiteColor];
+            indicatorView.backgroundView.backgroundColor = [UIColor clearColor];
             indicatorView.contentColor = [UIColor orangeColor];
             indicatorView.bezelView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.7f];
         }
@@ -67,7 +74,7 @@
                                                                         indicatorSize:CGSizeMake(35, 35)
                                                                                toView:self.view];
             indicatorView.type = WBLoadingAnimationBallPulse;
-            indicatorView.backgroundView.backgroundColor = [UIColor whiteColor];
+            indicatorView.backgroundView.backgroundColor = [UIColor clearColor];
             indicatorView.contentColor = [UIColor orangeColor];
             indicatorView.bezelView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.7f];
         }
@@ -78,7 +85,7 @@
                                                                         indicatorSize:CGSizeMake(50, 50)
                                                                                toView:self.view];
             indicatorView.type = WBLoadingAnimationBallClipRotate;
-            indicatorView.backgroundView.backgroundColor = [UIColor whiteColor];
+            indicatorView.backgroundView.backgroundColor = [UIColor clearColor];
             indicatorView.contentColor = [UIColor whiteColor];
             indicatorView.bezelView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.7f];
             
@@ -90,7 +97,7 @@
                                                                         indicatorSize:CGSizeMake(50, 50)
                                                                                toView:self.view.window];
             indicatorView.type = WBLoadingAnimationBallClipRotatePulse;
-            indicatorView.backgroundView.backgroundColor = [UIColor whiteColor];
+            indicatorView.backgroundView.backgroundColor = [UIColor clearColor];
             indicatorView.contentColor = [UIColor orangeColor];
             indicatorView.bezelView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.7f];
             
@@ -105,7 +112,7 @@
                                                                         indicatorSize:CGSizeMake(50, 50)
                                                                                toView:self.view];
             indicatorView.type = WBLoadingAnimationBallClipRotateMultiple;
-            indicatorView.backgroundView.backgroundColor = [UIColor whiteColor];
+            indicatorView.backgroundView.backgroundColor = [UIColor clearColor];
             indicatorView.contentColor = [UIColor orangeColor];
 //            indicatorView.bezelView.backgroundColor = [UIColor colorWithWhite:0.f alpha:0.7f];
         }
@@ -116,10 +123,10 @@
                                                                         indicatorSize:CGSizeMake(50, 50)
                                                                                toView:self.view];
             indicatorView.type = WBLoadingAnimationBallTrianglePath;
-            indicatorView.backgroundView.backgroundColor = [UIColor whiteColor];
+            indicatorView.backgroundView.backgroundColor = [UIColor clearColor];
             indicatorView.bezelView.style = WBLoadingIndicatorBackgroundSolidStyle;
             indicatorView.bezelView.backgroundColor = [UIColor clearColor];
-            indicatorView.indicatorColor = [UIColor orangeColor];
+            indicatorView.indicatorColor = [UIColor whiteColor];
             indicatorView.label.text = nil;
             
         }
@@ -129,10 +136,10 @@
             WBLoadingIndicatorView *indicatorView = [WBLoadingIndicatorView wb_showIndicatorAddTo:self.view];
             indicatorView.type = WBLoadingAnimationBallSurround;
             indicatorView.indicatorSize = CGSizeMake(45, 45);
-            indicatorView.backgroundView.backgroundColor = [UIColor whiteColor];
+            indicatorView.backgroundView.backgroundColor = [UIColor clearColor];
             indicatorView.bezelView.style = WBLoadingIndicatorBackgroundSolidStyle;
             indicatorView.bezelView.backgroundColor = [UIColor clearColor];
-            indicatorView.indicatorColor = [UIColor orangeColor];
+            indicatorView.indicatorColor = [UIColor purpleColor];
         }
             break;
         default:
@@ -152,6 +159,7 @@
 }
 
 - (void)hideIndicator {
+    _tableView.hidden = NO;
     WBLoadingIndicatorView *indicatorView1 = [WBLoadingIndicatorView wb_indicatorForView:self.view];
     [indicatorView1 wb_hideLoadingView:YES];
     

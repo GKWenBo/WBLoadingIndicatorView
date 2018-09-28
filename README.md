@@ -74,8 +74,9 @@ QQ：1050794513
 email：1050794513@qq.com
 
 ## 更新
-> - 2018-09-16 （1.1.1）：重构，添加WBLoadingAnimationBallSurround动画
-> - 2018-09-11 （1.0.1）：添加背景模糊效果
+> - 2018-09-17（1.1.4）：优化layer动画添加时机，修复更新view大小，动画闪烁问题，参考[MyLinearLayout](https://github.com/youngsoft/MyLinearLayout)视图布局完成block。
+> - 2018-09-16（1.1.1）：重构，添加WBLoadingAnimationBallSurround动画
+> - 2018-09-11（1.0.1）：添加背景模糊效果
 
 ## License
 
